@@ -106,14 +106,17 @@ const AdminFrom = () => {
                 {...register("applicationSource")}
               >
                 {[{
-                  label: "Twitter",
-                  value: "twitter"
+                  label: "SOCIAL MEDIA",
+                  value: "social_media"
                 }, {
-                  label: "Facebook",
-                  value: "facebook"
+                  label: "EMAIL/WEBSITE",
+                  value: "email_website"
                 }, {
-                  label: "Tik Tok",
-                  value: "tiktok"
+                  label: "CALL OR WHATSAPP",
+                  value: "call_whatsapp"
+                }, {
+                  label: "OFFICE",
+                  value: "office"
                 }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
               </Select>
             </FieldControl>
@@ -357,17 +360,6 @@ const AdminFrom = () => {
                 }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
               </Select>
             </FieldControl>
-
-            <FieldControl>
-              <TextField
-                id="studentNumber"
-                label="Student Number"
-                error={errors?.studentNumber ? true : false}
-                helperText={errors?.studentNumber ? "Student Number is Required" : !errors?.studentNumber ? "" : "Enter Student Number"}
-                variant="standard"
-                {...register("studentNumber", { required: true })}
-              />
-            </FieldControl>
           </Stack>
 
           <Stack p={2} />
@@ -384,51 +376,9 @@ const AdminFrom = () => {
                 id="tradingDate"
               />
             </FieldControl>
-
-            <FieldControl>
-              <TextField
-                id="quoteNumber"
-                label="Quote Number"
-                error={errors?.quoteNumber ? true : false}
-                helperText={errors?.quoteNumber ? "Quote Number is Required" : !errors?.quoteNumber ? "" : "Enter Quote Number"}
-                variant="standard"
-                {...register("quoteNumber", { required: true })}
-              />
-            </FieldControl>
           </Stack>
 
           <Stack p={2} />
-
-          <Stack width="100%" spacing={2}>
-            <FieldControl>
-              <TextField
-                id="invoiceNumber"
-                label="Invoice Number"
-                error={errors?.invoiceNumber ? true : false}
-                helperText={errors?.invoiceNumber ? "Invoice Number is Required" : !errors?.invoiceNumber ? "" : "Enter Invoice Number"}
-                variant="standard"
-                {...register("invoiceNumber", { required: true })}
-              />
-            </FieldControl>
-
-            <FieldControl>
-              <InputLabel id="completionStatus">Completion Status</InputLabel>
-              <Select
-                labelId="completionStatus"
-                id="completionStatus"
-                label="Completion Status"
-                {...register("completionStatus")}
-              >
-                {[{
-                  label: "Completed",
-                  value: "completed"
-                }, {
-                  label: "In Progress",
-                  value: "in-progress"
-                }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
-              </Select>
-            </FieldControl>
-          </Stack>
           
           <Stack p={4} />
 

@@ -106,6 +106,24 @@ const FinanceForm = () => {
                 {...register("invoiceNumber", { required: true })}
               />
             </FieldControl>
+
+            <FieldControl>
+              <InputLabel id="completionStatus">Completion Status</InputLabel>
+              <Select
+                labelId="completionStatus"
+                id="completionStatus"
+                label="Completion Status"
+                {...register("completionStatus")}
+              >
+                {[{
+                  label: "Completed",
+                  value: "completed"
+                }, {
+                  label: "In Progress",
+                  value: "in-progress"
+                }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
+              </Select>
+            </FieldControl>
           </Stack>
 
           <Stack p={4} />
