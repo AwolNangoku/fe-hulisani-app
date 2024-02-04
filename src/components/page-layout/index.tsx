@@ -11,7 +11,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
   const { choice } = useParams()
     
   return (
-    <Stack p="5%" bgcolor="yellow" width="100%" height="100vh">
+    <Stack p="5%" bgcolor="yellow" width="100%" sx={{ height: "fitContent"}}>
       {(() => {
         if (!choice) {
           return (
