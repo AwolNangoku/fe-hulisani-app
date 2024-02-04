@@ -343,11 +343,17 @@ const AdminFrom = () => {
                 {...register("paymentStatus")}
               >
                 {[{
-                  label: "Paid",
-                  value: "paid"
+                  label: "FULLY PAID",
+                  value: "fully_paid"
                 }, {
-                  label: "Pending",
-                  value: "pending"
+                  label: "HALF PAID",
+                  value: "half_paid"
+                }, {
+                  label: "ONLY REGISTRATION",
+                  value: "only_registration"
+                },{
+                  label: "NOT PAID",
+                  value: "not_paid"
                 }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
               </Select>
             </FieldControl>
