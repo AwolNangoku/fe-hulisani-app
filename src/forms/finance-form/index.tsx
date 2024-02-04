@@ -76,17 +76,6 @@ const FinanceForm = () => {
 
             <FieldControl>
               <TextField
-                id="id-number"
-                label="Identity Number"
-                error={errors?.idnumber ? true : false}
-                helperText={errors?.idnumber ? "Identity number is required" : !errors.identity ? "" : "Enter Identity Number"}
-                variant="standard"
-                {...register("idnumber", { required: true })}
-              />
-            </FieldControl>
-
-            <FieldControl>
-              <TextField
                 id="quoteNumber"
                 label="Quote Number"
                 error={errors?.quoteNumber ? true : false}
@@ -116,11 +105,14 @@ const FinanceForm = () => {
                 {...register("completionStatus")}
               >
                 {[{
-                  label: "Completed",
-                  value: "completed"
+                  label: "DROP OUT",
+                  value: "drop_out"
                 }, {
-                  label: "In Progress",
-                  value: "in-progress"
+                  label: "COMPLETED",
+                  value: "completed"
+                },{
+                  label: "IN PROGRESS",
+                  value: "in_progress"
                 }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
               </Select>
             </FieldControl>

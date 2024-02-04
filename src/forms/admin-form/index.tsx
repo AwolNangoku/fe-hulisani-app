@@ -366,14 +366,26 @@ const AdminFrom = () => {
 
           <Stack width="100%" spacing={2}>
             <FieldControl>
-              <InputLabel id="tradingDate">Trading Date</InputLabel>
+              <InputLabel id="trainingStartDate">Training Start Date</InputLabel>
               <TextField
                 type="date"
                 min={format(new Date(), 'yyyy-LL-dd')}
-                error={errors?.tradingDate ? true : false}
-                helperText={errors?.tradingDate ? "Trading Date is Required" : !errors?.tradingDate ? "" : "Select Trading Date"}
-                {...register("tradingDate", { required: true })}
-                id="tradingDate"
+                error={errors?.trainingStartDate ? true : false}
+                helperText={errors?.trainingStartDate ? "Training Start Date is Required" : !errors?.trainingStartDate ? "" : "Select Training Start Date"}
+                {...register("trainingStartDate", { required: true })}
+                id="trainingStartDate"
+              />
+            </FieldControl>
+
+            <FieldControl>
+              <InputLabel id="trainingEndDate">Training End Date</InputLabel>
+              <TextField
+                type="date"
+                min={format(new Date(), 'yyyy-LL-dd')}
+                error={errors?.trainingEndDate ? true : false}
+                helperText={errors?.trainingEndDate ? "Training End Date is Required" : !errors?.trainingEndDate ? "" : "Select Training End Date"}
+                {...register("trainingEndDate", { required: true })}
+                id="trainingEndDate"
               />
             </FieldControl>
           </Stack>

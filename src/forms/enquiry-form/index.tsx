@@ -82,14 +82,20 @@ const EnquiryFrom = () => {
                 {...register("enquiryType")}
               >
                 {[{
-                  label: "Type A",
-                  value: "type_a"
+                  label: "PRISA TRAINING UPGRADE",
+                  value: "prisa_training_upgrade"
                 }, {
-                  label: "Type B",
-                  value: "type_b"
+                  label: "APPLICATION RELATED QUERRIES",
+                  value: "application_related_querries"
                 }, {
-                  label: "Type C",
-                  value: "type_c"
+                  label: "TRAININGT ENQUIRY",
+                  value: "training_enquiry"
+                }, {
+                  label: "TRAINING RESULTS ENQUIRY",
+                  value: "training_results_enquiry"
+                }, {
+                  label: "PAYMENT ENQUIRY",
+                  value: "payment_enquiry"
                 }].map((option) => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}
               </Select>
             </FieldControl>
